@@ -21,7 +21,7 @@ public class Player implements Serializable{
     public Player() {
     }
 
-    ksjdfheroehfklsdflsdifeirfpejsdgnkfdgnk
+   // here was a line
     
     public String getName() {
         return name;
@@ -71,7 +71,4 @@ public class Player implements Serializable{
         }
         return true;
     }
-/*
-    this is a comment block for this file
-    */
 }

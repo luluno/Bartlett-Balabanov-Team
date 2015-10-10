@@ -17,10 +17,12 @@ public class Player implements Serializable{
     //class instance variables
     private String name;
     private double bestTime;
-
+    private String coordinates;
+    private String effectiveness;
+    
     public Player() {
     }
-    
+
     public String getName() {
         return name;
     }
@@ -37,17 +39,36 @@ public class Player implements Serializable{
         this.bestTime = bestTime;
     }
 
+    public String getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public String getEffectiveness() {
+        return effectiveness;
+    }
+
+    public void setEffectiveness(String effectiveness) {
+        this.effectiveness = effectiveness;
+    }
+
+      
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + Objects.hashCode(this.name);
         hash = 97 * hash + (int) (Double.doubleToLongBits(this.bestTime) ^ (Double.doubleToLongBits(this.bestTime) >>> 32));
+        hash = 97 * hash + Objects.hashCode(this.coordinates);
+        hash = 97 * hash + Objects.hashCode(this.effectiveness);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", bestTime=" + bestTime + '}';
+        return "Player{" + "name=" + name + ", bestTime=" + bestTime + ", coordinates=" + coordinates + ", effectiveness=" + effectiveness + '}';
     }
     
     
@@ -67,7 +88,14 @@ public class Player implements Serializable{
         if (Double.doubleToLongBits(this.bestTime) != Double.doubleToLongBits(other.bestTime)) {
             return false;
         }
+        if (!Objects.equals(this.coordinates, other.coordinates)) {
+            return false;
+        }
+        if (!Objects.equals(this.effectiveness, other.effectiveness)) {
+            return false;
+        }
         return true;
+          
     }
 /*
     this is a comment block for this file

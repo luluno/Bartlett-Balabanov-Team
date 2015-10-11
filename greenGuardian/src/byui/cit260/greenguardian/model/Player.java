@@ -12,8 +12,8 @@ import java.io.Serializable;
  *
  * @author Joe
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+   
     //class instance variables
     private String name;
     private double bestTime;

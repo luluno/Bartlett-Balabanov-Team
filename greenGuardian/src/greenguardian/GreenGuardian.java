@@ -6,6 +6,7 @@
 package greenguardian;
 
 import byui.cit260.greenguardian.model.Player;
+import byui.cit260.greenguardian.model.map;
 
 /**
  *
@@ -24,7 +25,14 @@ public class GreenGuardian {
      
      String playerInfo = playerOne.toString();
      System.out.println(playerInfo);
-  
+  //Displaying Map class
+    map mapfirst = new map();
+    mapfirst.setrowCount(2);
+    mapfirst.setcolumnCount(3);
+    
+    String mapscoordinates = mapfirst.toString();
+    System.out.print(mapscoordinates);
+    
     }
     
 }

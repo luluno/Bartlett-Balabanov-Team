@@ -100,8 +100,9 @@ public class Transportation implements Serializable {
     public String toString() {
         return "Transportation{" + "Type=" + type + 
 		", maxWeight=" + maxWeight +
-		",ammountLoaded=" + ammountLoaded +
-		",loadedweight="+ loadedWeight + "cost=$"+ cost + 
-		",description=" +description+ "}";
+		", ammountLoaded=" + ammountLoaded +
+		", loadedweight="+ loadedWeight + 
+		", cost=$"+ cost + 
+		", description=" +description+ "}";
     }
  }

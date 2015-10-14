@@ -19,6 +19,9 @@ import java.util.Objects;
  * @author Nicholas Balabanov
  */
 public class Map implements Serializable {
+   
+   public Map () 
+   {}
 
    // Declare a class variables
 

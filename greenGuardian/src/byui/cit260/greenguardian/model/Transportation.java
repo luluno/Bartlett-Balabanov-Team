@@ -25,6 +25,9 @@ public class Transportation implements Serializable {
    private float loadedWeight;
    private float cost;
    private String description;
+   
+   public Transportation ()
+   {}
 
    /*
     *Declare the mutators get

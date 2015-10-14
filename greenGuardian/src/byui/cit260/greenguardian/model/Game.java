@@ -18,6 +18,9 @@ public class Game implements Serializable
 {
 private int totalTime;
 private float distance;
+
+public Game ()
+{}
    /*
     * Declare the mutators get
     */

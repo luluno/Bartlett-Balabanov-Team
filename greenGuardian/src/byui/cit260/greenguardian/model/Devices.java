@@ -23,6 +23,8 @@ public class Devices implements Serializable
    private float space;
    private float cost;
    
+   public Devices ()
+   {}
    /*
     *Declare the mutators get
     */

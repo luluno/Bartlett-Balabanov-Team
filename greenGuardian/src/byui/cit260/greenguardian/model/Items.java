@@ -24,7 +24,8 @@ public class Items implements Serializable
    private boolean recycleable;
    private float cost;
    
-  
+  public Items () 
+  {}
 
    /*
     *Declare the mutators get

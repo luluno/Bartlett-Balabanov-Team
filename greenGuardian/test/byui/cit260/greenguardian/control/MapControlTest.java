@@ -5,10 +5,6 @@
  */
 package byui.cit260.greenguardian.control;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -21,22 +17,6 @@ public class MapControlTest {
    public MapControlTest() {
    }
    
-   @BeforeClass
-   public static void setUpClass() {
-   }
-   
-   @AfterClass
-   public static void tearDownClass() {
-   }
-   
-   @Before
-   public void setUp() {
-   }
-   
-   @After
-   public void tearDown() {
-   }
-
    /**
     * Test of calcTimeToMove method, of class MapControl.
     */
@@ -46,7 +26,7 @@ public class MapControlTest {
       /*************************************
       * Test Cases #1 The valid cityCoordinates(7,5); playerCoordinates(2,3);
       **************************************/
-      System.out.println("Test case#1 cityCoordinates(7,5); playerCoordinates(2,3)");
+      System.out.println("\tTest case #1 cityCoordinates(7,5); playerCoordinates(2,3)");
       MapControl instance = new MapControl(); // Create an object of the MapControl Class
       //Create an object of Coordinates class, name it cityCoordinates and use non-default constructor to provide
       //the necessary value to the variables row and column
@@ -56,7 +36,87 @@ public class MapControlTest {
       MapControl.Coordinates playerCoordinates = instance.new Coordinates((byte)2,(byte)3);
       float expResult = 2400;
       float result = instance.calcTimeToMove(playerCoordinates, cityCoordinates);
-      System.out.println("the expected result="+expResult+" and result="+result);
+      System.out.println("\tThe expected result = "+expResult+" and result = "+result);
+      System.out.println();
       assertEquals(expResult, result, 0.01);
-   }
+      
+      /***********************************
+       * Test Cases #2 The valid cityCoordinates (4,5); playerCoordinates (2,3);
+      ************************************/
+      System.out.println("\tTest case #2 cityCoordinates(4,5); playerCoordinates(2,3)");
+      
+      cityCoordinates = instance.new Coordinates((byte)4, (byte)5);
+      playerCoordinates = instance.new Coordinates((byte)2, (byte)3);
+      expResult = 679;
+      result = instance.calcTimeToMove(playerCoordinates, cityCoordinates);
+      System.out.println("\tThe expected result = "+expResult+" and result = "+result);
+      System.out.println();
+      assertEquals(expResult, result, 0.01);
+      
+      /***********************************
+       * Test Cases #3 The valid cityCoordinates (2,5); playerCoordinates (2,3);
+      ************************************/
+      System.out.println("\tTest case #3 cityCoordinates(2,5); playerCoordinates(2,3)");
+      
+      cityCoordinates = instance.new Coordinates((byte)2, (byte)5);
+      playerCoordinates = instance.new Coordinates((byte)2,(byte)3);
+      expResult = 480;
+      result = instance.calcTimeToMove(playerCoordinates, cityCoordinates);
+      System.out.println("\tThe expected result = "+expResult+" and result = "+result);
+      System.out.println();
+      assertEquals(expResult, result, 0.01);
+      
+      /***********************************
+       * Test Cases #4 The valid cityCoordinates (5,3); playerCoordinates (2,3);
+      ************************************/
+      System.out.println("\tTest case #4 cityCoordinates(5,3); playerCoordinates(2,3)");
+      
+      cityCoordinates = instance.new Coordinates((byte)5, (byte)3);
+      playerCoordinates = instance.new Coordinates((byte)2,(byte)3);
+      expResult = 720;
+      result = instance.calcTimeToMove(playerCoordinates, cityCoordinates);
+      System.out.println("\tThe expected result = "+expResult+" and result = "+result);
+      System.out.println();
+      assertEquals(expResult, result, 0.01);
+      
+      /***********************************
+       * Test Cases #5 The invalid cityCoordinates (2,3); playerCoordinates (2,3);
+      ************************************/
+      System.out.println("\tTest case #5 cityCoordinates(2,3); playerCoordinates(2,3)");
+      
+      cityCoordinates = instance.new Coordinates((byte)2, (byte)3);
+      playerCoordinates = instance.new Coordinates((byte)2,(byte)3);
+      expResult = 0;
+      result = instance.calcTimeToMove(playerCoordinates, cityCoordinates);
+      System.out.println("\tThe expected result = "+expResult+" and result = "+result);
+      System.out.println();
+      assertEquals(expResult, result, 0.01);
+      
+      /***********************************
+       * Test Cases #6 The boundary cityCoordinates (-5,-5); playerCoordinates (1,1);
+      ************************************/
+      System.out.println("\tTest case #6 cityCoordinates(-5,-5); playerCoordinates(1,1)");
+      
+      cityCoordinates = instance.new Coordinates((byte)-5, (byte)-5);
+      playerCoordinates = instance.new Coordinates((byte)1,(byte)1);
+      expResult = 2036;
+      result = instance.calcTimeToMove(playerCoordinates, cityCoordinates);
+      System.out.println("\tThe expected result = "+expResult+" and result = "+result);
+      System.out.println();
+      assertEquals(expResult, result, 0.01);
+      
+      /***********************************
+       * Test Cases #7 The boundary cityCoordinates (5,5); playerCoordinates (1,1);
+      ************************************/
+      System.out.println("\tTest case #7 cityCoordinates(5,5); playerCoordinates(1,1)");
+      
+      cityCoordinates = instance.new Coordinates((byte)5, (byte)5);
+      playerCoordinates = instance.new Coordinates((byte)1,(byte)1);
+      expResult = 1358;
+      result = instance.calcTimeToMove(playerCoordinates, cityCoordinates);
+      System.out.println("\tThe expected result = "+expResult+" and result = "+result);
+      System.out.println();
+      assertEquals(expResult, result, 0.01);
+      
+     }
 }

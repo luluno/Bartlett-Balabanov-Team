@@ -72,7 +72,7 @@ public class MapControl {
 	 this.column = 0;
       }
       /********************************
-      *This is a Non-Default contrucat
+      *This is a Non-Default constructor
       ********************************/
       public Coordinates(byte row, byte column)
       {

@@ -62,8 +62,6 @@ public class Location implements Serializable {
         return "Location{" + "row=" + row + ", column=" + column + ", amountRemaining=" + amountRemaining + '}';
     }
 
-    
-    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {

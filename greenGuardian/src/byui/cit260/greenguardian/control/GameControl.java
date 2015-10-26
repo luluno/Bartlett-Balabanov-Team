@@ -47,6 +47,7 @@ public class GameControl {
 
       short days = daysInMonth(date.month, date.year);
       if (adjustment <= 0) {
+	 //This part would be replaced by the eceptional errors and catchers
 	 System.out.println("We can't go back in time, the time machines didn't invent yet.");
 	 date.day = (byte) adjustment;
       }
@@ -64,12 +65,14 @@ public class GameControl {
    }
 
    private short daysInMonth(byte month, short year) {
+      // this part will be replaced by the actual code that will calculate the days for every month.
       System.out.println("The ammount days in Month would be dinamic, but right now it would return maximum ammount of days.");
 //To change body of generated methods, choose Tools | Templates.
       return 31;
    }
 
    private void adjustMonth(Dates date, byte i) {
+      // this part will be replaced by the actual code that will be respond for the month adjustment.
       System.out.println("Months was adjusted");//To change body of generated methods, choose Tools | Templates.
    }
 

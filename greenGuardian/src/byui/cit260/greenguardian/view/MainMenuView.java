@@ -29,9 +29,9 @@ public class MainMenuView {
             System.out.println(MENU); // display the main menu
             
             String input = this.getInput(); // get the user's selection
+	    input.toUpperCase();
             selection = input.charAt(0); // get first character of string
-        this.// do action based on selection
-       
+	    this.doAction(selection);// do action based on selection
         } while (selection != 'E'); // a selection is not "Exit"
     }
 
@@ -58,5 +58,28 @@ public class MainMenuView {
         }
         
         return Input; 
+    }
+    public void doAction(char choice)
+    {
+       switch(choice)
+       {
+	  case 'N':
+	     this.startNewGame();
+	     break;
+	  case 'G':
+	     this.startExistingGame();
+	     break;
+	  case 'H':
+	     this.displayHelpMenu();
+	     break;
+	  case 'S':
+	     this.saveGame();
+	     break;
+	  case 'E':
+	     return;
+	  default:
+	     System.out.println("\n**** Invalid selection *** Try again");
+	     break;
+       }
     }
 }

@@ -7,7 +7,7 @@ package byui.cit260.greenguardian.control;
 
 /**
  *
- * @author Lucia Bartlett indivual assignment
+ * 
  */
 public class CityControl {
     

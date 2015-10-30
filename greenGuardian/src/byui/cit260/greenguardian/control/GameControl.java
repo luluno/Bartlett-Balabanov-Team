@@ -15,6 +15,10 @@ public class GameControl {
     * in minutes to time in days.
     */
 
+    public static void createNewGame(Player player){
+        System.out.println("\n*****createNewGame stub function called *****");
+    }
+    
    public short calcConvertTime(short time, short days) {
       if (time <= 0) {
 	 return 3;
@@ -26,6 +30,8 @@ public class GameControl {
 
       return days;
    }
+   
+  
 
    /**
     * *********************************************************************

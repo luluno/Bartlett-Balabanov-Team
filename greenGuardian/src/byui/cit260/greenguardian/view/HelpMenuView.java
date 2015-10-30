@@ -5,30 +5,28 @@
  */
 package byui.cit260.greenguardian.view;
 
-import java.util.Scanner; 
-import byui.cit260.greenguardian.view.GameMenuView;
-import byui.cit260.greenguardian.control.GameControl;
-import byui.cit260.greenguardian.view.HelpMenuView;
+import java.util.Scanner;
+
 /**
  *
- * @author Lucia Bartlett & Nicholas Balabanov
+ * @author Lucia bartlett & Nicholas Balabanov
  */
-public class MainMenuView {
-
-   private final String MENU = "\n"
+public class HelpMenuView {
+    private final String MENU = "\n"
            + "\n======================================================================"
-           + "\n|                           Main Menu                                |"
+           + "\n|                           Help Menu                                |"
            + "\n======================================================================"
-           + "\nG - Start new game"         
-           + "\nH - How to play the game"
-           + "\nS - Save game"
+           + "\nG - Getting Started"         
+           + "\nF - Frequently asked questions"
+           + "\nD - Difficulty level"
+           + "\nR - Recyclopedia"            
            + "\nE - Exit"
            + "\n======================================================================";
    
     public void displayMenu() {
         char selection = ' ';
         do {
-            System.out.println(MENU); // display the main menu
+            System.out.println(MENU); // display the help menu
             
             String input = this.getInput(); // get the user's selection
 	    input.toUpperCase();
@@ -65,17 +63,17 @@ public class MainMenuView {
     {
        switch(choice)
        {
-	  case 'N':
-	     this.startNewGame();
-	     break;
 	  case 'G':
-	     this.startExistingGame();
+	     this.gettingStarted();
 	     break;
-	  case 'H':
-	     this.displayHelpMenu();
+	  case 'F':
+	     this.frequentlyAskedQuestions();
 	     break;
-	  case 'S':
-	     this.saveGame();
+	  case 'D':
+	     this.difficultyLevel();
+	     break;
+	  case 'R':
+	     this.recyclopedia();
 	     break;
 	  case 'E':
 	     return;
@@ -84,36 +82,4 @@ public class MainMenuView {
 	     break;
        }
     }
-       private void startNewGame(){
-           //create a new game
-           /*Beging
-              *  Create a new game
-              * Create a new Game Menu View 
-              * Display the Game Menu
-           END
-           */
-       GameControl.createNewGame(GreenGuardian.getPlayer());
-       
-       // display the game menu
-       GameMenuView gameMenu = new GameMenuView();
-       gameMenu.displayMenu();
-    } 
-       private void startExistingGame(){
-         System.out.println("**** startExistingGamed function called ****");
-         /*Beging
-              *  Create a new game
-              * Create a new Game Menu View 
-              * Display the Game Menu
-           END
-           */
-    }
-       private void saveGame(){
-        System.out.println("**** saveGame function called ****");
-       }
-       private void displayHelpMenu(){
-       
-           HelpMenuView helpMenu = HelpMenuView();
-           helpMenu.displayMenu();       
-             
-       }
 }

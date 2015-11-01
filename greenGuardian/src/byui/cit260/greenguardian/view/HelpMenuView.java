@@ -29,7 +29,7 @@ public class HelpMenuView {
             System.out.println(MENU); // display the help menu
             
             String input = this.getInput(); // get the user's selection
-	    input.toUpperCase();
+	    input = input.toUpperCase();
             selection = input.charAt(0); // get first character of string
 	    this.doAction(selection);// do action based on selection
         } while (selection != 'E'); // a selection is not "Exit"
@@ -50,7 +50,7 @@ public class HelpMenuView {
             Input = Input.trim();
             
             //if the value is invalid (less than two characters in length)
-            if (Input.length() < 2){
+            if (Input.length() <= 0){
                 System.out.println("Invalid value - the value must not be blank");
                 continue; // and repeat again
             }
@@ -67,7 +67,7 @@ public class HelpMenuView {
 	     this.gettingStarted();
 	     break;
 	  case 'F':
-	     this.frequentlyAskedQuestions();
+	     this.FAQ();
 	     break;
 	  case 'D':
 	     this.difficultyLevel();
@@ -82,4 +82,22 @@ public class HelpMenuView {
 	     break;
        }
     }
+
+   private void gettingStarted() {
+      System.out.println("\n*****displayGettingStartedMenu stub function called ****");
+      //choose Tools | Templates.
+   }
+
+   private void FAQ() {
+      System.out.println("\n*****FAQMenu stub function called ****");
+// choose Tools | Templates.
+   }
+
+   private void difficultyLevel() {
+      System.out.println("\n*****The information about difficult level stub function called ****"); //To change body of generated methods, choose Tools | Templates.
+   }
+
+   private void recyclopedia() {
+System.out.println("\n*****The information from recyclopedia stub function called ****"); //To change body of generated methods, choose Tools | Templates.
+   }
 }

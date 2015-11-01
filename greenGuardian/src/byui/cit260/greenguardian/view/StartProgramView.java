@@ -73,7 +73,7 @@ public class StartProgramView {
             playersName = playersName.trim();
             
             //if the name is invalid (less than two characters in length)
-            if (playersName.length() < 2){
+            if (playersName.length()== 0){
                 System.out.println("Invalid name - the name must not be blank");
                 continue; // and repeat again
             }

@@ -9,6 +9,8 @@ import java.util.Scanner;
 import byui.cit260.greenguardian.view.GameMenuView;
 import byui.cit260.greenguardian.control.GameControl;
 import byui.cit260.greenguardian.view.HelpMenuView;
+import byui.cit260.greenguardian.model.Player;
+import greenguardian.GreenGuardian;
 /**
  *
  * @author Lucia Bartlett & Nicholas Balabanov
@@ -31,7 +33,7 @@ public class MainMenuView {
             System.out.println(MENU); // display the main menu
             
             String input = this.getInput(); // get the user's selection
-	    input.toUpperCase();
+	   input = input.toUpperCase();
             selection = input.charAt(0); // get first character of string
 	    this.doAction(selection);// do action based on selection
         } while (selection != 'E'); // a selection is not "Exit"
@@ -52,7 +54,7 @@ public class MainMenuView {
             Input = Input.trim();
             
             //if the value is invalid (less than two characters in length)
-            if (Input.length() < 2){
+            if (Input.length()== 0){
                 System.out.println("Invalid value - the value must not be blank");
                 continue; // and repeat again
             }
@@ -112,7 +114,7 @@ public class MainMenuView {
        }
        private void displayHelpMenu(){
        
-           HelpMenuView helpMenu = HelpMenuView();
+           HelpMenuView helpMenu = new HelpMenuView();
            helpMenu.displayMenu();       
              
        }

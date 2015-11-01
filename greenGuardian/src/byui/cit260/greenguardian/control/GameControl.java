@@ -5,6 +5,8 @@
  */
 package byui.cit260.greenguardian.control;
 
+import byui.cit260.greenguardian.model.Player;
+
 /**
  *
  * @author Lucia Bartlett Individual Assignment
@@ -15,7 +17,8 @@ public class GameControl {
     * in minutes to time in days.
     */
 
-    public static void createNewGame(Player player){
+    public static void createNewGame(Player player)
+    {
         System.out.println("\n*****createNewGame stub function called *****");
     }
     
@@ -33,8 +36,7 @@ public class GameControl {
    
   
 
-   /**
-    * *********************************************************************
+   /*********************************************************************
     * Program: GreedGuardian, Developing the GameControl subclass Brother
     * Jackson, CIT260 Author: Nicholas Balabanov Summary: This is a GameControl
     * class that responds for everything that would happened in the

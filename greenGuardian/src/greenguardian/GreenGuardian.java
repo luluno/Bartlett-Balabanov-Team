@@ -5,15 +5,7 @@
  */
 package greenguardian;
 
-import byui.cit260.greenguardian.model.City;
-import byui.cit260.greenguardian.model.ExploreCityScene;
-import byui.cit260.greenguardian.model.Location;
 import byui.cit260.greenguardian.model.Player;
-import byui.cit260.greenguardian.model.WorkPlaceScene;
-import byui.cit260.greenguardian.model.Map;
-import byui.cit260.greenguardian.model.Transportation;
-import byui.cit260.greenguardian.model.Items;
-import byui.cit260.greenguardian.model.Devices;
 import byui.cit260.greenguardian.model.Game;
 import byui.cit260.greenguardian.view.StartProgramView;
 

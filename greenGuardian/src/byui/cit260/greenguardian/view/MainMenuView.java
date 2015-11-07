@@ -92,7 +92,7 @@ public class MainMenuView {
               * Display the Game Menu
            END
            */
-       GameControl.createNewGame(GreenGuardian.getPlayer());
+       //GameControl.createNewGame(GreenGuardian.getPlayer());
        
        // display the game menu
        GameMenuView gameMenu = new GameMenuView();

@@ -6,9 +6,7 @@
 package byui.cit260.greenguardian.view;
 
 import java.util.Scanner; 
-import byui.cit260.greenguardian.view.GameMenuView;
 import byui.cit260.greenguardian.control.GameControl;
-import byui.cit260.greenguardian.view.HelpMenuView;
 import byui.cit260.greenguardian.model.Player;
 import greenguardian.GreenGuardian;
 /**

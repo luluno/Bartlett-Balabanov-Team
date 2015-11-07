@@ -37,25 +37,24 @@ public class StartProgramView {
 
     public void displayBanner() {
         //Introduction to Green Guardian game
-       System.out.println("\n\n*********************************************************");
+       System.out.println("\n\n*************************************************************");
+       System.out.println("*                                                                                 \t*"
+                             + "\n* This is the game of Green Guardian. In this game, the\t*"
+                             + "\n* player will help the Earth stay clean by exploring       \t*"
+                             + "\n* different cities and help citizens to manage their         \t*"
+                             + "\n* ecological problems.                                                  \t*");
        
-       System.out.println("*                                                       *"
-                        + "\n* This is the game of Green Guardian. In this game, the *"
-                        + "\n* player will help the Earth stay clean by exploring    *"
-                        + "\n* different cities and help citizens to manage their    *"
-                        + "\n* ecological problems.                                  *");
+       System.out.println("*                                                                                  \t*"
+                        + "\n* You will need to first check the ecological                        \t*"
+                        + "\n* circumstances in the area and develop a plan how to        \t*"
+                        + "\n* fix that problem. Green guardian will teach citizens          \t*"
+                        + "\n* how to manage the problem in the future.                       \t*");
        
-       System.out.println("*                                                       *"
-                        + "\n* You will need to first check the ecological           *"
-                        + "\n* circumstances in the area and develop a plan how to   *"
-                        + "\n* fix that problem. Green guardian will teach citizens  *"
-                        + "\n* how to manage the problem in the future.              *");
-       
-       System.out.println("*                                                       *"
-                        + "\n* Have fun in this adventure.                           *"
-                        + "\n*                                                       *");
+       System.out.println("*                                                                                  \t*"
+                        + "\n* Have fun in this adventure.                                              \t*"
+                        + "\n*                                                                                       \t*");
         
-       System.out.println("*********************************************************");
+       System.out.println("*************************************************************");
     }
 
     public String getPlayersName() {
@@ -71,12 +70,14 @@ public class StartProgramView {
             //get the name from the keyboard and trim off the blanks
             playersName = keyboard.nextLine();
             playersName = playersName.trim();
-            
+            playersName = Character.toUpperCase(playersName.charAt(0)) + playersName.substring(1);
             //if the name is invalid (less than two characters in length)
             if (playersName.length()== 0){
                 System.out.println("Invalid name - the name must not be blank");
                 continue; // and repeat again
             }
+	    else if (playersName.length()==1)
+	    {System.out.println("The user name is too short, please choose another one.");}
             break; // out of the (exit) the repetition
         }
         

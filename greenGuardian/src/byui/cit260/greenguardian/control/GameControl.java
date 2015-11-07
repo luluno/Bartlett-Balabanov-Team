@@ -34,21 +34,16 @@ public class GameControl {
       return days;
    }
    
-  
-
    /*********************************************************************
-    * Program: GreedGuardian, Developing the GameControl subclass Brother
-    * Jackson, CIT260 Author: Nicholas Balabanov Summary: This is a GameControl
-    * class that responds for everything that would happened in the
-    * game-program.
-    * **********************************************************************
-    */
+    * Program: GreedGuardian, Developing the GameControl subclass 
+    * Brother: Jackson, CIT260 
+    * Author: Nicholas Balabanov 
+    * Summary: This is a GameControl class that responds for everything that 
+    * would happened in the game-program.
+    * **********************************************************************/
    /**
     *
     * @author Nicholas Balabanov
-    */
-   /*
-    *
     */
    public void adjustDay(Dates date, short adjustment) {
       // receive the ammount days in the current month;

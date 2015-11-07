@@ -18,14 +18,14 @@ import greenguardian.GreenGuardian;
 public class MainMenuView {
 
    private final String MENU = "\n"
-           + "\n======================================================================"
-           + "\n|                           Main Menu                                |"
-           + "\n======================================================================"
-           + "\nG - Start new game"         
-           + "\nH - How to play the game"
-           + "\nS - Save game"
-           + "\nE - Exit"
-           + "\n======================================================================";
+           + "\n ==============================="
+           + "\n|                           Main Menu         \t          |"
+           + "\n ==============================="
+           + "\n|\tG - Start new game         \t          |"
+           + "\n|\tH - How to play the game\t          |"
+           + "\n|\tS - Save game                 \t          |"
+           + "\n|\tE - Exit                            \t          |"
+           + "\n===============================";
    
     public void displayMenu() {
         char selection = ' ';

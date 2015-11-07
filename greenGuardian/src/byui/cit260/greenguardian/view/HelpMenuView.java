@@ -13,15 +13,15 @@ import java.util.Scanner;
  */
 public class HelpMenuView {
     private final String MENU = "\n"
-           + "\n======================================================================"
-           + "\n|                           Help Menu                                |"
-           + "\n======================================================================"
-           + "\nG - Getting Started"         
-           + "\nF - Frequently asked questions"
-           + "\nD - Difficulty level"
-           + "\nR - Recyclopedia"            
-           + "\nE - Exit"
-           + "\n======================================================================";
+           + "\n==============================="
+           + "\n|                           Help Menu                    \t          |"
+           + "\n==============================="
+           + "\nG - Getting Started                    \t          |"
+           + "\nF - Frequently asked questions   \t          |"
+           + "\nD - Difficulty level                     \t          |"
+           + "\nR - Recyclopedia                       \t          |"
+           + "\nE - Exit                                     \t          |"
+           + "\n===============================";
    
     public void displayMenu() {
         char selection = ' ';
@@ -89,7 +89,7 @@ public class HelpMenuView {
    }
 
    private void FAQ() {
-      System.out.println("\n*****FAQMenu stub function called ****");
+      FAQ.display();
 // choose Tools | Templates.
    }
 

@@ -1,9 +1,8 @@
 /*********************************************************************
-    * Program: GreedGuardian, Developing the GameControl subclass 
+    * Program: GreedGuardian, Developing the FAQ Class 
     * Brother: Jackson, CIT260 
     * Author: Nicholas Balabanov 
-    * Summary: This is a GameControl class that responds for everything that 
-    * would happened in the game-program.
+    * Summary: This is a FAQ class that displays answers on the questions 
     * **********************************************************************/
 package byui.cit260.greenguardian.view;
 

@@ -1,8 +1,8 @@
 /**
  * *******************************************************************
- * Program: GreedGuardian, Developing the Game Menu Class Brother: Jackson,
- * CIT260 Author: Nicholas Balabanov Summary: This is a FAQ class that displays
- * answers on the questions 
+ * Program: GreedGuardian, Developing the GameMenu View Class Brother: Jackson,
+ * CIT260 Author: Nicholas Balabanov Summary: This is a GameMenuView class that displays
+ * Controls most of the game 
     * *********************************************************************
  */
 package byui.cit260.greenguardian.view;

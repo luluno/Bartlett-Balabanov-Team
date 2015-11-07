@@ -18,11 +18,12 @@ public class GameMenuView {
    void displayMenu() {
       char choice;
       choice = ' ';
-      String Menu = ("*************************************\n"
-		     + "* This is Game Menu \\t*\n"
-		     + "*************************************");
+      String Menu = ("*****************************************************\n"
+	      + "* \tThis is Game Menu     \t          *\n"
+	      + "*****************************************************");
+      System.out.println(Menu);
       do {
-	 System.out.println(Menu);
+	 
 	 choice = this.getInput();
 	 this.doAction(choice);
       }
@@ -106,23 +107,22 @@ public class GameMenuView {
       {
        final String menu = "\n"
 	       + "\n ==============================="
-	       + "\n|                           Main Menu         \t          |"
+	       + "\n|                           Game Menu         \t          |"
 	       + "\n ==============================="
 	       + "\n|\tV - View Map         \t          |"
-	       + "\n|\tU - View tools\t          |"
-	       + "\n|\tS - Display city status                 \t          |"
-	       + "\n|\tC - Explore the city                 \t          |"
-	       + "\n|\tM - Move to a new city                 \t          |"
-	       + "\n|\tE - Estimate time and distane                 \t          |"
-	       + "\n|\tT - Transportation                 \t          |"
-	       + "\n|\tL - Estimate the load of Transportation                 \t          |"
-	       + "\n|\tW - Work on city                 \t          |"
-	       + "\n|\tX - Collect the trash                 \t          |"
-	       + "\n|\tA - Ask United Greenpeace Corporation, if aplicable.                 \t          |"
-	       + "\n|\tH - Display help menu                 \t          |"
-	       + "\n|\tQ - Quit the game                            \t          |"
-	       + "\n===============================";
+	       + "\n|\tU - View tools  \t          |"
+	       + "\n|\tS - Display city status\t          |"
+	       + "\n|\tC - Explore the city   \t          |"
+	       + "\n|\tM - Move to a new city\t          |"
+	       + "\n|\tE - Estimate time and distane\t          |"
+	       + "\n|\tT - Transportation        \t          |"
+	       + "\n|\tL - Estimate the load of Tran.\t          |"
+	       + "\n|\tW - Work on city         \t          |"
+	       + "\n|\tX - Collect the trash     \t          |"
+	       + "\n|\tA - Ask UGC, if aplicable.\t          |"
+	       + "\n|\tH - Display help menu  \t          |"
+	       + "\n|\tQ - Quit the game        \t          |"
+	       + "\n===============================\n";
        System.out.println(menu);
-   
       }
 }
